@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import "./All.css"
 // import { Link } from 'react-router-dom';
-import Coming from './Comings00n';
-import Team from './Team';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import Coming from './Comings00n';
+// import Team from './Team';
  function Navbar(){
   // State to control the menu toggle
   const [isNavOpen, setIsNavOpen] = useState(false);
-
+    
   // Toggle function for menu visibility
   const handleNavToggle = () => {
     setIsNavOpen(!isNavOpen);
@@ -61,14 +60,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
         <div className="line"></div>
       </label>
     </div>
-   <Router>
-   <Routes> 
-   <Route path="/home" element={<Team />} />
-
-   <Route path="/coming-soon" element={<Coming />} />
-   <Route path="/team" element={<Team />} />
- </Routes> 
-   </Router>
+   
 
 </>
   );
