@@ -1,9 +1,14 @@
 import "./All.css"
-function Card({data}){
+interface CardProps {
+  data: { name: string; description: string; 'image-url': string }[]; // Define the type of 'data'
+}
+function Card({data}:CardProps){
     return (
         <>
     
-        {data.map((name, index) => (   
+        {/* {data.map((name, index) => (    */}
+        {data.map((name: { name: string; description: string; 'image-url': string }, index:number) => (
+
      <div className="card"  style={{ width: '18rem' }} key={index}>
        <div className="image-container">
        <img className="card-img-top" src={name['image-url']} alt="Card image cap"/>
